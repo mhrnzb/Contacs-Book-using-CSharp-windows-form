@@ -154,6 +154,7 @@
             this.btnNewContact.Name = "btnNewContact";
             this.btnNewContact.Size = new System.Drawing.Size(136, 28);
             this.btnNewContact.Text = "افزودن شخص جدید";
+            this.btnNewContact.Click += new System.EventHandler(this.btnNewContact_Click);
             // 
             // btnRefresh
             // 
