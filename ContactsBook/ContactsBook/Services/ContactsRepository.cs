@@ -4,12 +4,15 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 
 namespace ContactsBook
 {
     class ContactsRepository : IContactsRepository
     {
+        private string connection = " Data Source= .;Initial Catalog=Contact_DB;Integrated Security = true";
+
         public bool Delete(int contactId)
         {
             throw new NotImplementedException();
