@@ -30,36 +30,36 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFamily = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.NumericUpDown();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAge)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtMobile);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.txtAge);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtFamily);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(27, 29);
             this.groupBox1.Name = "groupBox1";
@@ -79,19 +79,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "نام :";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(401, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 29);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(401, 45);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(177, 29);
+            this.txtName.TabIndex = 1;
             // 
-            // textBox2
+            // txtFamily
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 29);
-            this.textBox2.TabIndex = 3;
+            this.txtFamily.Location = new System.Drawing.Point(93, 45);
+            this.txtFamily.Name = "txtFamily";
+            this.txtFamily.Size = new System.Drawing.Size(178, 29);
+            this.txtFamily.TabIndex = 3;
             // 
             // label2
             // 
@@ -103,13 +103,13 @@
             this.label2.Text = "نام خانوادگی :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(401, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 29);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtEmail.Location = new System.Drawing.Point(401, 89);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(177, 29);
+            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
@@ -130,19 +130,19 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "سن :";
             // 
-            // numericUpDown1
+            // txtAge
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(93, 90);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(178, 29);
-            this.numericUpDown1.TabIndex = 7;
+            this.txtAge.Location = new System.Drawing.Point(93, 90);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(178, 29);
+            this.txtAge.TabIndex = 7;
             // 
-            // textBox4
+            // txtMobile
             // 
-            this.textBox4.Location = new System.Drawing.Point(93, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(485, 29);
-            this.textBox4.TabIndex = 9;
+            this.txtMobile.Location = new System.Drawing.Point(93, 140);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(485, 29);
+            this.txtMobile.TabIndex = 9;
             // 
             // label5
             // 
@@ -153,13 +153,13 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "موبایل:";
             // 
-            // textBox5
+            // txtAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(93, 188);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(485, 96);
-            this.textBox5.TabIndex = 11;
+            this.txtAddress.Location = new System.Drawing.Point(93, 188);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(485, 96);
+            this.txtAddress.TabIndex = 11;
             // 
             // label6
             // 
@@ -193,7 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAge)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,18 +201,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFamily;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown txtAge;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label5;
     }
 }

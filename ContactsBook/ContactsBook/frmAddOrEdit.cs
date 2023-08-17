@@ -12,9 +12,59 @@ namespace ContactsBook
 {
     public partial class frmAddOrEdit : Form
     {
+        ContactsRepository repository; 
+
+
+
         public frmAddOrEdit()
         {
             InitializeComponent();
+
+            repository = new ContactsRepository();
+        }
+
+
+        bool ValidateInputs()
+        {
+            
+
+            if (txtName.Text == "")
+            {
+                
+                MessageBox.Show("لطفا نام را وارد کنید ", "هشدار", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtEmail.Text == "")
+            {
+
+                MessageBox.Show("لطفا ایمیل  را وارد کنید ", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtFamily.Text == "")
+            {
+
+                MessageBox.Show("لطفا نام خانوادگی  را وارد کنید ", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtAge.Value == 0)
+            {
+
+                MessageBox.Show("لطفا سن  را وارد کنید ", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtMobile.Text == "")
+            {
+
+                MessageBox.Show("لطفا موبایل  را وارد کنید ", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+
+            return true; 
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -39,7 +89,10 @@ namespace ContactsBook
 
         private void button1_Click(object sender, EventArgs e)
         {//btnSubmit
+            if (ValidateInputs())
+            {
 
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ namespace ContactsBook
         private void btnNewContact_Click(object sender, EventArgs e)
         {
             frmAddOrEdit frm = new frmAddOrEdit();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

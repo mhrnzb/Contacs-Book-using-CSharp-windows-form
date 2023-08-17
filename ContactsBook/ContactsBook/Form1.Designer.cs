@@ -54,7 +54,7 @@
             this.btnRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(928, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(928, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -152,7 +152,7 @@
             this.btnNewContact.Image = ((System.Drawing.Image)(resources.GetObject("btnNewContact.Image")));
             this.btnNewContact.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNewContact.Name = "btnNewContact";
-            this.btnNewContact.Size = new System.Drawing.Size(136, 28);
+            this.btnNewContact.Size = new System.Drawing.Size(136, 24);
             this.btnNewContact.Text = "افزودن شخص جدید";
             this.btnNewContact.Click += new System.EventHandler(this.btnNewContact_Click);
             // 
@@ -179,6 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "دفترچه تلفن من";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
