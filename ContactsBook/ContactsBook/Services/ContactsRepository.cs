@@ -11,7 +11,7 @@ namespace ContactsBook
 {
     class ContactsRepository : IContactsRepository
     {
-        private string connection = " Data Source= .;Initial Catalog=Contact_DB;Integrated Security = true";
+        private string connectionString = " Data Source= .;Initial Catalog=Contact_DB;Integrated Security = true";
 
         public bool Delete(int contactId)
         {
@@ -25,7 +25,8 @@ namespace ContactsBook
 
         public DataTable SelectAll()
         {
-            throw new NotImplementedException();
+            string query = "Select * From MyContacts";
+            SqlConnection connection = new SqlConnection(connectionString);
         }
 
         public DataTable SelectRow(int contactId)
