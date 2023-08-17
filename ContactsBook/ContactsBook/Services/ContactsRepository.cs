@@ -27,6 +27,10 @@ namespace ContactsBook
         {
             string query = "Select * From MyContacts";
             SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+            return data;
         }
 
         public DataTable SelectRow(int contactId)

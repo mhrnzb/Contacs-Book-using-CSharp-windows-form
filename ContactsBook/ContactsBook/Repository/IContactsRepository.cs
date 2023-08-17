@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace ContactsBook.Repository
+namespace ContactsBook
 {
     internal interface IContactsRepository
     {
