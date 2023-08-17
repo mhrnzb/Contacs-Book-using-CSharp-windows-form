@@ -21,8 +21,18 @@ namespace ContactsBook
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            BindGrid();
+        }
+
+        private void BindGrid()
+        {
             dgContacts.AutoGenerateColumns = false;
-            dgContacts.DataSource = repository.SelectAll(); 
+            dgContacts.DataSource = repository.SelectAll();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BindGrid();
         }
     }
 }
