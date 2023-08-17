@@ -12,9 +12,17 @@ namespace ContactsBook
 {
     public partial class Form1 : Form
     {
+        IContactsRepository repository;
         public Form1()
         {
             InitializeComponent();
+            repository = new ContactsRepository();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgContacts.AutoGenerateColumns = false;
+            dgContacts.DataSource = repository.SelectAll(); 
         }
     }
 }
