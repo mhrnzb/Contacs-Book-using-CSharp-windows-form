@@ -68,5 +68,21 @@ namespace ContactsBook
                 MessageBox.Show("لطفا یک کاربر را از لیست انتخاب کنید");
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if(dgContacts.CurrentRow != null)
+            {
+                int contactId = int.Parse(dgContacts.CurrentRow.Cells[0].Value.ToString());
+                frmAddOrEdit frm = new frmAddOrEdit();
+                frm.contactId = contactId;
+
+                if(frm.ShowDialog() == DialogResult.OK)
+                {
+                    BindGrid();
+                }
+
+            }
+        }
     }
 }

@@ -12,7 +12,8 @@ namespace ContactsBook
 {
     public partial class frmAddOrEdit : Form
     {
-        ContactsRepository repository; 
+        IContactsRepository repository;
+        public int contactId = 0;
 
 
 
@@ -109,7 +110,14 @@ namespace ContactsBook
 
         private void frmAddOrEdit_Load(object sender, EventArgs e)
         {
-            this.Text = "افزودن شخص جدید ";
+            if (contactId == 0)
+            {
+                this.Text = "افزودن شخص جدید ";
+            }
+            else
+            {
+                this.Text = "ویرایش شخض";
+            }
 
 
         }

@@ -15,7 +15,23 @@ namespace ContactsBook
 
         public bool Delete(int contactId)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(connectionString);
+            try
+            {
+                string query = "Delete From MyContacts Where ContactID = @ID ";
+                SqlCommand command = new SqlCommand(query, connection) ;
+                command.Parameters.AddWithValue("@ID" , contactId);
+                command.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public bool Insert(string name, string family, string mobile, string email, int age, string address)
