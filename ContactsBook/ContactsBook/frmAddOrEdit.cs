@@ -117,6 +117,7 @@ namespace ContactsBook
             else
             {
                 this.Text = "ویرایش شخض";
+                DataTable dt = repository.SelectRow(contactId);
             }
 
 

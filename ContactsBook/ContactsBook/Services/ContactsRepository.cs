@@ -82,7 +82,12 @@ namespace ContactsBook
 
         public DataTable SelectRow(int contactId)
         {
-            throw new NotImplementedException();
+            string query = "Select * From MyContacts Where ContactID=" + contactId;
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+            return data;
         }
 
         public bool Update(int contactId, string name, string family, string mobile, string email, int age, string address)
