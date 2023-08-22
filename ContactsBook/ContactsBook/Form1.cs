@@ -27,6 +27,7 @@ namespace ContactsBook
         private void BindGrid()
         {
             dgContacts.AutoGenerateColumns = false;
+            dgContacts.Columns[0].Visible = false;
             dgContacts.DataSource = repository.SelectAll();
         }
 
@@ -43,6 +44,26 @@ namespace ContactsBook
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 BindGrid();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(dgContacts.CurrentRow != null)
+            {
+                string name = dgContacts.CurrentRow.Cells[1].Value.ToString();
+                string family = dgContacts.CurrentRow.Cells[2].Value.ToString();
+                string fullName = name + " " + family;
+                if (MessageBox.Show($"آیا از حذف {fullName} اطمینان دارید؟", "توجه" , MessageBoxButtons.YesNo) ==DialogResult.Yes)
+                {
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("لطفا یک کاربر را از لیست انتخاب کنید");
             }
         }
     }

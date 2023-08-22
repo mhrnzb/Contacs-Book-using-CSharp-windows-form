@@ -91,7 +91,7 @@ namespace ContactsBook
         {//btnSubmit
             if (ValidateInputs())
             {
-               bool isSuccess =  repository.Insert(txtName.Text, txtFamily.Text, txtMobile.Text, txtEmail.Text, (int)txtAge.Value, txtAddress.Text);
+               bool isSuccess =  repository.Insert(txtName.Text, txtFamily.Text, txtMobile.Text, txtEmail.Text, (int) txtAge.Value, txtAddress.Text);
                 if (isSuccess)
                 {
                     MessageBox.Show("عملیات با موفقیت انجام شد ", "موفقیت", MessageBoxButtons.OK, MessageBoxIcon.Information);
