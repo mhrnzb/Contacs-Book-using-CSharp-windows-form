@@ -20,7 +20,38 @@ namespace ContactsBook
 
         public bool Insert(string name, string family, string mobile, string email, int age, string address)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(connectionString);
+            try
+            {
+                
+                string query = "Insert Into MyContacts(Name , Family ,Email ,Age , Mobile , Address) values(@Name , @Family ,@Email ,@Age , @Mobile , @Address ) ";
+                
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@Family", family);
+                command.Parameters.AddWithValue("@Email", mobile);
+                command.Parameters.AddWithValue("@Age", email);
+                command.Parameters.AddWithValue("@Mobile", age);
+                command.Parameters.AddWithValue("@Address", address);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                
+
+
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+
+            }
         }
 
         public DataTable SelectAll()

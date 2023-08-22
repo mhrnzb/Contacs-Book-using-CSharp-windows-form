@@ -39,6 +39,11 @@ namespace ContactsBook
         {
             frmAddOrEdit frm = new frmAddOrEdit();
             frm.ShowDialog();
+
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                BindGrid();
+            }
         }
     }
 }
