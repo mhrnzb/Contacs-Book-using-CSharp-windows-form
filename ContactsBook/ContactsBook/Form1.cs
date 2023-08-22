@@ -56,7 +56,9 @@ namespace ContactsBook
                 string fullName = name + " " + family;
                 if (MessageBox.Show($"آیا از حذف {fullName} اطمینان دارید؟", "توجه" , MessageBoxButtons.YesNo) ==DialogResult.Yes)
                 {
-
+                    int contactId = int.Parse(dgContacts.CurrentRow.Cells[0].Value.ToString());
+                    repository.Delete(contactId);
+                    BindGrid();
                 }
 
 
