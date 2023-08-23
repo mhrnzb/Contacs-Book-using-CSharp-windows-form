@@ -43,6 +43,7 @@ namespace ContactsBook
                 string query = "Insert Into MyContacts(Name , Family ,Email ,Age , Mobile , Address) values(@Name , @Family ,@Email ,@Age , @Mobile , @Address ) ";
                 
                 SqlCommand command = new SqlCommand(query, connection);
+    
                 command.Parameters.AddWithValue("@Name", name);
                 command.Parameters.AddWithValue("@Family", family);
                 command.Parameters.AddWithValue("@Email", mobile);
@@ -92,7 +93,32 @@ namespace ContactsBook
 
         public bool Update(int contactId, string name, string family, string mobile, string email, int age, string address)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(connectionString);
+            try
+            {
+                string query = "Update MyContacts Set Name=@Name , Family=@Family ,Mobile=@Mobile, Email=@Email , Age=@Age , Address=@Address  Where ContactID=@ID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ID", contactId);
+                command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@Family", family);
+                command.Parameters.AddWithValue("@Email", mobile);
+                command.Parameters.AddWithValue("@Age", email);
+                command.Parameters.AddWithValue("@Mobile", age);
+                command.Parameters.AddWithValue("@Address", address);
+                connection.Open();
+                command.ExecuteNonQuery();
+                return true;
+            }
+
+
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
