@@ -118,6 +118,15 @@ namespace ContactsBook
             {
                 this.Text = "ویرایش شخض";
                 DataTable dt = repository.SelectRow(contactId);
+                txtName.Text = dt.Rows[0][1].ToString();
+                txtFamily.Text = dt.Rows[0][2].ToString();
+                txtMobile.Text = dt.Rows[0][3].ToString();
+                txtEmail.Text = dt.Rows[0][5].ToString();
+                txtAge.Text = dt.Rows[0][4].ToString();
+                txtAddress.Text = dt.Rows[0][6].ToString();
+                btnSubmit.Text = "ویرایش";
+
+
             }
 
 
