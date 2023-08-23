@@ -92,7 +92,18 @@ namespace ContactsBook
         {//btnSubmit
             if (ValidateInputs())
             {
-               bool isSuccess =  repository.Insert(txtName.Text, txtFamily.Text, txtMobile.Text, txtEmail.Text, (int) txtAge.Value, txtAddress.Text);
+                bool isSuccess;
+                if (contactId == 0)
+                {
+                    isSuccess = repository.Insert(txtName.Text, txtFamily.Text, txtMobile.Text, txtEmail.Text, (int)txtAge.Value, txtAddress.Text);
+                }
+                else
+                {
+                    isSuccess = repository.Update(contactId, txtName.Text, txtFamily.Text, txtMobile.Text, txtEmail.Text, (int)txtAge.Value, txtAddress.Text);
+                }
+
+
+
                 if (isSuccess)
                 {
                     MessageBox.Show("عملیات با موفقیت انجام شد ", "موفقیت", MessageBoxButtons.OK, MessageBoxIcon.Information);
